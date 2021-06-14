@@ -10,7 +10,6 @@ const init_test_server = () => {
     });
 
     server.route(routeroute);
-    // await server.start();
     return server;
 };
 
