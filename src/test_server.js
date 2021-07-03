@@ -1,7 +1,6 @@
 'use strict';
 
 const Hapi = require('@hapi/hapi');
-// const { rootroute, libraryroute } = require("./routes");
 const { routes } = require("./routes");
 
 const init_test_server = () => {
@@ -13,9 +12,6 @@ const init_test_server = () => {
     routes.forEach(currentRoute => {
         server.route(currentRoute);
     });
-    // server.route(routes);
-    // server.route(rootroute);
-    // server.route(libraryroute);
     return server;
 };
 

@@ -1,3 +1,5 @@
+const { libraryRoute } = require("./library/controllers/library_controller");
+
 const rootroute = {
     method: 'GET',
     path: '/',
@@ -8,14 +10,5 @@ const rootroute = {
 };
 
 
-const libraryroute = {
-    method: 'GET',
-    path: '/library',
-    handler: (request, h) => {
-        const response = Object({test: "test"})
-        return response;
-    }
-}
-
-const routes = [ rootroute, libraryroute ];
+const routes = [ rootroute, libraryRoute ];
 exports.routes = routes;

@@ -18,18 +18,18 @@ describe("When root route is called", function() {
     });
 });
 
-describe("When library route is called", function() {
-    it("returns 200 response", function (done) {
-        // GIVEN
+// describe("When library route is called", function() {
+//     it("returns 200 response", function (done) {
+//         // GIVEN
 
-        // WHEN
-        request(server.listener)
-        .get("/library")
+//         // WHEN
+//         request(server.listener)
+//         .get("/library")
         
-        // THEN
-        .expect(200, (err, resp) => {
-            expect(resp.status).to.eql(200);
-            done();
-        })
-    });
-});
+//         // THEN
+//         .expect(200, (err, resp) => {
+//             expect(resp.status).to.eql(200);
+//             done();
+//         })
+//     });
+// });
