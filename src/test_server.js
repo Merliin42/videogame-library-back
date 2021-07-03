@@ -1,7 +1,7 @@
 'use strict';
 
 const Hapi = require('@hapi/hapi');
-const { routeroute } = require("./routes");
+const { rootroute, libraryroute } = require("./routes");
 
 const init_test_server = () => {
     const server = Hapi.server({
@@ -9,7 +9,8 @@ const init_test_server = () => {
         host: 'localhost'
     });
 
-    server.route(routeroute);
+    server.route(rootroute);
+    server.route(libraryroute);
     return server;
 };
 

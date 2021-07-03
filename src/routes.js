@@ -1,4 +1,4 @@
-const routeroute = {
+const rootroute = {
     method: 'GET',
     path: '/',
     handler: (request, h) => {
@@ -7,4 +7,15 @@ const routeroute = {
     }
 };
 
-exports.routeroute = routeroute;
+exports.rootroute = rootroute;
+
+const libraryroute = {
+    method: 'GET',
+    path: '/library',
+    handler: (request, h) => {
+        const response = Object({test: "test"})
+        return response;
+    }
+}
+
+exports.libraryroute = libraryroute;
