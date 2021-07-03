@@ -1,7 +1,7 @@
 'use strict';
 
 const Hapi = require('@hapi/hapi');
-const { rootroute, libraryroute } = require("./routes");
+const { routes } = require("./routes");
 
 const init = async () => {
 
@@ -10,8 +10,9 @@ const init = async () => {
         host: 'localhost'
     });
 
-    server.route(rootroute);
-    server.route(libraryroute);
+    routes.forEach(currentRoute => {
+        server.route(currentRoute);
+    });
     await server.start();
     console.log('Server running on %s', server.info.uri);
 };

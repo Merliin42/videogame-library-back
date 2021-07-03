@@ -7,7 +7,6 @@ const rootroute = {
     }
 };
 
-exports.rootroute = rootroute;
 
 const libraryroute = {
     method: 'GET',
@@ -18,4 +17,5 @@ const libraryroute = {
     }
 }
 
-exports.libraryroute = libraryroute;
+const routes = [ rootroute, libraryroute ];
+exports.routes = routes;
