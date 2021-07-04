@@ -1,10 +1,10 @@
-const libraryRoute = {
+const listVideogamesRoute = {
     method: 'GET',
-    path: '/library',
+    path: '/videogames',
     handler: (request, h) => {
         const response = Object({test: "test"})
         return response;
     }
 }
 
-exports.libraryRoute = libraryRoute;
+exports.listVideogamesRoute = listVideogamesRoute;

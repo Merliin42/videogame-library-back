@@ -1,4 +1,4 @@
-const { libraryRoute } = require("./library/controllers/library_controller");
+const { listVideogamesRoute } = require("./videogames/infra/controller");
 
 const rootroute = {
     method: 'GET',
@@ -10,5 +10,5 @@ const rootroute = {
 };
 
 
-const routes = [ rootroute, libraryRoute ];
+const routes = [ rootroute, listVideogamesRoute ];
 exports.routes = routes;
