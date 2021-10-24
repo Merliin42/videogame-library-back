@@ -1,4 +1,4 @@
-const listVideogamesRoute = {
+export const listVideogamesRoute = {
     method: 'GET',
     path: '/videogames',
     handler: (request, h) => {
@@ -6,5 +6,3 @@ const listVideogamesRoute = {
         return response;
     }
 }
-
-exports.listVideogamesRoute = listVideogamesRoute;

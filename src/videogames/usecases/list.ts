@@ -1,4 +1,4 @@
-const listVideogames = function () {
+export const listVideogames = function () {
     const list = [
         {
             id: "XDF01",
@@ -9,5 +9,3 @@ const listVideogames = function () {
     }];
     return list;
 };
-
-exports.listVideogames = listVideogames;

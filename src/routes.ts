@@ -1,4 +1,4 @@
-const { listVideogamesRoute } = require("./videogames/infra/controller");
+import { listVideogamesRoute } from "./videogames/infra/controller";
 
 const rootroute = {
     method: 'GET',
@@ -10,5 +10,4 @@ const rootroute = {
 };
 
 
-const routes = [ rootroute, listVideogamesRoute ];
-exports.routes = routes;
+export const routes = [ rootroute, listVideogamesRoute ];

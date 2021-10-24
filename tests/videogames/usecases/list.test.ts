@@ -1,7 +1,8 @@
-const chai = require("chai");
-const expect = chai.expect;
-const { listVideogames } = require("../../../src/videogames/usecases/list");
-const assertArrays = require("chai-arrays");
+import chai from "chai";
+import { expect } from "chai";
+import { listVideogames } from "../../../src/videogames/usecases/list";
+import assertArrays from "chai-arrays";
+
 chai.use(assertArrays);
 
 describe("When listVideogames is called", function() {
@@ -18,7 +19,7 @@ describe("When listVideogames is called", function() {
         // WHEN
         const actual = listVideogames();
         //THEN
-        expect(actual).to.be.array();
+        expect(actual).to.be.an('array');
         done();
     })
 })

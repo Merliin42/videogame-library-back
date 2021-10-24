@@ -1,6 +1,7 @@
-const expect = require("chai").expect;
-const request = require("supertest");
-const server = require("../src/test_server").server;
+import { expect } from "chai";
+import request from "supertest";
+import { server } from "../src/test_server";
+
 
 describe("When root route is called", function() {
     it("returns 200 response", function (done) {

@@ -1,7 +1,7 @@
 'use strict';
 
-const Hapi = require('@hapi/hapi');
-const { routes } = require("./routes");
+import Hapi from "@hapi/hapi"
+import { routes } from "./routes";
 
 const init_test_server = () => {
     const server = Hapi.server({
@@ -15,5 +15,4 @@ const init_test_server = () => {
     return server;
 };
 
-const server = init_test_server();
-exports.server = server;
+export const server = init_test_server();
