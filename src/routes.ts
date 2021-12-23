@@ -1,4 +1,4 @@
-import { listVideogamesRoute } from "./videogames/infra/controller";
+import { listVideogamesRoute } from "./Videogames/infra/controller";
 
 const rootroute = {
     method: 'GET',
