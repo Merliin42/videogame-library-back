@@ -1,6 +1,6 @@
 import chai from "chai";
 import { expect } from "chai";
-import { listVideogames } from "../../../src/videogames/usecases/list";
+import { listVideogames } from "../../../src/Videogames/usecases/list";
 import assertArrays from "chai-arrays";
 
 chai.use(assertArrays);
@@ -19,7 +19,7 @@ describe("When listVideogames is called", function() {
         // WHEN
         const actual = listVideogames();
         //THEN
-        expect(actual).to.be.an('array');
+        expect(actual).to.be.an('object');
         done();
     })
 })
