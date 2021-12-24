@@ -1,10 +1,11 @@
 import express from "express";
+import { routes } from "./routes";
 
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
-    res.status(200).send("Hello World, this is my videogame library!");
+routes.forEach((route) => {
+    app.use("/", route);
 });
 
 app.listen(port, () => {

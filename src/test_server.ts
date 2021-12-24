@@ -1,11 +1,12 @@
 "use strict";
 
 import express from "express";
+import { routes } from "./routes";
 
 const app = express();
 
-app.get("/", (req, res) => {
-    res.status(200).send("Hello World!");
+routes.forEach((route) => {
+    app.use("/", route);
 });
 
 export const server = app;

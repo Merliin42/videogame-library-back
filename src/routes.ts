@@ -1,13 +1,10 @@
 import { listVideogamesRoute } from "./Videogames/infra/controller";
+import { Router } from "express";
 
-const rootroute = {
-    method: 'GET',
-    path: '/',
-    handler: (request, h) => {
+const router = Router();
 
-        return 'Hello World! This is my videogame library.';
-    }
-};
+router.get("/", function (req, res) {
+    res.send("Hello World, this is my videogame library!");
+});
 
-
-export const routes = [ rootroute, listVideogamesRoute ];
+export const routes = [router, listVideogamesRoute];
