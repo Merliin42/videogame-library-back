@@ -1,18 +1,11 @@
-'use strict';
+"use strict";
 
-import Hapi from "@hapi/hapi"
-import { routes } from "./routes";
+import express from "express";
 
-const init_test_server = () => {
-    const server = Hapi.server({
-        port: 3001,
-        host: 'localhost'
-    });
-    
-    routes.forEach(currentRoute => {
-        server.route(currentRoute);
-    });
-    return server;
-};
+const app = express();
 
-export const server = init_test_server();
+app.get("/", (req, res) => {
+    res.status(200).send("Hello World!");
+});
+
+export const server = app;
