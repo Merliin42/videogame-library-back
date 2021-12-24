@@ -5,21 +5,23 @@ import assertArrays from "chai-arrays";
 
 chai.use(assertArrays);
 
-describe("When listVideogames is called", function() {
+describe("When listVideogames is called", function () {
     it("returns a list of videogames", function (done) {
         // GIVEN
         const expected = [
             {
                 id: "XDF01",
-                name: "Zelda"
-        }, {
+                name: "Zelda",
+            },
+            {
                 id: "LR04",
-                name: "MGS"
-        }];
+                name: "MGS",
+            },
+        ];
         // WHEN
         const actual = listVideogames();
         //THEN
-        expect(actual).to.be.an('object');
+        expect(actual).to.be.an("object");
         done();
-    })
-})
+    });
+});
