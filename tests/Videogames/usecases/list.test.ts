@@ -22,6 +22,8 @@ describe("When listVideogames is called", function () {
         const actual = listVideogames();
         //THEN
         expect(actual).to.be.an("object");
+        expect(actual.mgs.name).to.eql("Metal Gear Solid");
+        expect(actual.zelda.name).to.eql("Zelda");
         done();
     });
 });

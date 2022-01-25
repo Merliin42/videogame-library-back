@@ -4,7 +4,7 @@ import { Router } from "express";
 const router = Router();
 
 router.get("/videogames", function (req, res) {
-    res.json({ test: "test" });
+    res.status(200).json(listVideogames());
 });
 
 export const listVideogamesRoute = router;

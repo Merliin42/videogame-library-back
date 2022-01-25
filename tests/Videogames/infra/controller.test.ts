@@ -13,6 +13,7 @@ describe("When videogames route is called", function () {
         // THEN
             .expect(200, (err, resp) => {
                 expect(resp.status).to.eql(200);
+                expect(resp.body).to.be.a("JSON");
             });
         done();
     });
